@@ -1,0 +1,25 @@
+#include<stdio.h>
+void main ()
+{
+        int i,j,m,n;
+        printf("Enter the number of rows for hollow pattern\n");
+        scanf("%d",&m);
+        printf("Enter the number of columns for hollo pattern\n");
+        scanf("%d",&n);
+        printf("Hollow rectangular pattern is \n");
+        for(i=1;i<=m;i++)
+        {
+                for(j=1;j<=n;j++)
+                {
+                        if(i==1 ||j==1 || i==m ||j==n)
+                        {
+                                printf("*");
+                        }
+                        else
+                        {
+                                printf(" ");
+                        }
+                }
+                printf("\n");
+        }
+}

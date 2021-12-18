@@ -1,0 +1,29 @@
+#include<stdio.h>
+void main ()
+{
+                int oddsum=0,i,n,a[100],evensum=0;
+                 printf("Enter the number of array :\n");
+                 scanf("%d",&n);
+                 printf("Enter the elements of an array :\n");
+                 for(i=0;i<n;i++)
+                {
+                 scanf("%d",&a[i]);
+               }
+                printf("Elements of array are :\n");
+                for(i=0;i<n;i++)
+                {
+
+                  printf("%d\n",a[i]);
+                  if(a[i]%2==0)
+                  {
+                          evensum++;
+
+                  }
+                  if(a[i]%2==1)
+                  {
+                          oddsum++;
+                  }
+                }
+                printf("number of odd numbers in an array :%d\n",oddsum);
+                printf("number of even numbers in an array : %d\n",evensum);
+}

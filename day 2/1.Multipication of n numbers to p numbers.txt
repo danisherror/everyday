@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<math.h>
+int main ()
+{
+        int i,n,mult,p;
+        printf("Enter the number for which you want multipication table \n");
+        scanf("%d",&n);
+        printf("Enter the number till you want to find the multipication \n");
+        scanf("%d",&p);
+        for(i=0;i<=p;i++)
+        {
+                mult=n*i;
+                printf("%d * %d =%d\n",n,i,mult);
+        }
+        return 0;
+}

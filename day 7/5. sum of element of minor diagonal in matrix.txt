@@ -1,0 +1,30 @@
+#include<stdio.h>
+void main ()
+{
+        int i,n,j,a[100][100],sum=0;
+        printf("Enter the number of rows or columns for square matrix\n");
+        scanf("%d",&n);
+        printf("Enter the elements of an matrix\n");
+        for(i=0;i<n;i++)
+        {
+                for(j=0;j<n;j++)
+                {
+                        scanf("%d",&a[i][j]);
+                }
+        }
+        printf("Elements of a matrix \n");
+        for(i=0;i<n;i++)
+        {
+                for(j=0;j<n;j++)
+                {
+                        printf(" %d ",a[i][j]);
+                }
+                printf("\n");
+        }
+        for(i=0;i<n;i++)
+        {
+                j=n-1-i;
+                sum=sum+a[i][j];
+        }
+        printf("Sum of elementsof minor diagonal of matrix:%d\n",sum);
+}

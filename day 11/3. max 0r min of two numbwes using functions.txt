@@ -1,0 +1,21 @@
+#include<stdio.h>
+double max(double n,double m);
+double min(double n,double m);
+int main ()
+{
+        float m,n,c,b;
+        printf("enter the two numbers \n");
+        scanf("%f%f",&n,&m);
+        c= max(n,m);
+        b= min(n,m);
+        printf("%.1f is maximum and %.1f is minimum\n",c,b);
+        return 0;
+}
+double max(double n,double m)
+{
+        return( (m>n)?m:n);
+}
+double min(double n, double m)
+{
+        return( (m>n)?n:m);
+}

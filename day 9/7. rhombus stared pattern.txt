@@ -1,0 +1,23 @@
+#include<stdio.h>
+void main ()
+{
+        int i,j,n;
+        printf("Enter the number of rows / columns for rhombus pattern\n");
+        scanf("%d",&n);
+        printf("Pattern is \n");
+        for(i=1;i<=n;i++)
+        {
+                for(j=1;j<2*n;j++)
+                {
+                        if(j>= (n+1-i) && j<=(2*n-i))
+                        {
+                                printf("*");
+                        }
+                        else
+                        {
+                                printf(" ");
+                        }
+                }
+                printf("\n");
+        }
+}

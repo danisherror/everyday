@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main ()
+{
+        int n1,n2,max;
+        printf("enter the number n1 \n");
+        scanf("%d",&n1);
+        printf("Enter the number n2\n");
+        scanf("%d",&n2);
+        max= (n1>n2)?n1:n2;
+        while(1)
+        {
+                if(max%n1==0 && max%n2==0)
+                {
+                        printf("Lcm of %d and %d =%d \n",n1,n2,max);
+                        break;
+                }
+                max++;
+        }
+        return 0;
+}

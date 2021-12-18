@@ -1,0 +1,29 @@
+#include<stdio.h>
+void main ()
+{
+        int a[100],f[100],i,n;
+        int flag[1000]={0};
+        printf("Enter the number of elements of an array :\n");
+        scanf("%d",&n);
+        printf("Enter the elements of an array :\n");
+        for(i=0;i<n;i++)
+        {
+                scanf("%d",&a[i]);
+                f[a[i]]=0;
+        }
+        printf("Elements of an array :\n");
+        for(i=0;i<n;i++)
+        {
+                printf("%d\n",a[i]);
+               f[a[i]]++;
+        }
+        for(i=0;i<n;i++)
+        {
+                if(flag[a[i]] ==0)
+                {
+
+                printf("Frequency of %d element of array = %d\n ",a[i],f[a[i]]);
+                flag[a[i]] = 1;
+                }
+        }
+}

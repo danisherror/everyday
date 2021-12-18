@@ -1,0 +1,75 @@
+#include<stdio.h>
+void main ()
+{
+        int a[100][100],b[100][100],c[100][100];
+        int i,j,m,k,n,p,q,sum=0;
+        printf("Enter the number of rows in matrix1\n");
+        scanf("%d",&m);
+        printf("Enter the number of columns in matrix1\n");
+        scanf("%d",&n);
+        printf("Enter the elements of matrix\n");
+        for(i=0;i<m;i++)
+        {
+                for(j=0;j<n;j++)
+                {
+                        scanf("%d",&a[i][j]);
+                }
+        }
+        printf("Enter the number of rows for matrix2\n");
+        scanf("%d",&p);
+        printf("Enter the number of columns for matrix2\n");
+        scanf("%d",&q);
+        printf("Enter the elements for matris2\n");
+        for(i=0;i<p;i++)
+        {
+                for(j=0;j<q;j++)
+                {
+                        scanf("%d",&b[i][j]);
+                }
+        }
+         printf("Elements of matrix1\n");
+        for(i=0;i<m;i++)
+        {
+                for(j=0;j<n;j++)
+                {
+                        printf(" %d ",a[i][j]);
+                }
+                printf("\n");
+        }
+        printf("Elements of matrix2\n");
+        for(i=0;i<p;i++)
+        {
+                for(j=0;j<q;j++)
+                {
+                        printf(" %d ",b[i][j]);
+                }
+                printf("\n");
+        }
+        if(n!=p)
+        {
+                printf("multipication of matarix not possible\n");
+        }
+	 else
+        {
+                for(i=0;i<m;i++)
+                {
+                        for(j=0;j<q;j++)
+                        {
+                                for(k=0;k<n;k++)
+                                {
+                                        sum=sum+ a[i][k]*b[k][j];
+                                }
+                                c[i][j]=sum;
+                        }
+                }
+                printf("Multipication of two matrix\n");
+                for(i=0;i<m;i++)
+                {
+                        for(j=0;j<q;j++)
+                        {
+                                printf("%d\t",c[i][j]);
+                        }
+                        printf("\n");
+                }
+        }
+}

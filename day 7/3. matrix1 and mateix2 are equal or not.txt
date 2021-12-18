@@ -1,0 +1,74 @@
+#include<stdio.h>
+void main()
+{
+        int a[100][100],b[100][100];
+        int i,j,m,n,p,q,flag=1;
+        printf("Enter the number of rows in an array1\n");
+        scanf("%d",&m);
+        printf("Enter the number of columns in an array1\n");
+        scanf("%d",&n);
+        printf("Enter the elements of an array1\n");
+        for(i=0;i<m;i++)
+        {
+                for(j=0;j<n;j++)
+                {
+                        scanf("%d",&a[i][j]);
+                }
+        }
+        printf("Enter the number of rows for array2\n");
+        scanf("%d",&p);
+        printf("Enter the number of columns for array2\n");
+        scanf("%d",&q);
+        printf("Enter the elements of an array2\n");
+        for(i=0;i<p;i++)
+        {
+                for(j=0;j<q;j++)
+                {
+                        scanf("%d",&b[i][j]);
+                }
+        } printf("Elements of an array1\n");
+        for(i=0;i<m;i++)
+        {
+                for(j=0;j<n;j++)
+                {
+                        printf(" %d ",a[i][j]);
+                }
+                printf("\n");
+        }
+        printf("elements of an array2\n");
+        for(i=0;i<p;i++)
+        {
+                for(j=0;j<q;j++)
+                {
+                        printf(" %d ",b[i][j]);
+                }
+                printf("\n");
+        }
+        if(m==p && n==q)
+        {
+
+                for(i=0;i<m;i++)
+                {
+                        for(j=0;j<n;j++)
+                        {
+                                if(a[i][j]!=b[i][j])
+                                {
+                                        flag=0;
+                                        break;
+                                }
+                        }
+                }
+        if(flag==1)
+        {
+                printf(" array1 and array2 are equal\n");
+        }
+        else
+        {
+                printf(" array1 and array2 are not equal\n");
+        }
+        }
+        else
+        {
+                printf("  array1 and array2 are not equal\n");
+        }
+}

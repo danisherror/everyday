@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main ()
+{
+        int i,a[100],n;
+        printf("Enter the number of elementes in an array \n ");
+        scanf("%d",&n);
+        printf("Enter the ellements of an array\n");
+        for(i=0;i<n;i++)
+        {
+                scanf("%d",&a[i]);
+        }
+        printf("Elements of an array : \n");
+        for(i=0;i<n;i++)
+        {
+                printf("%d ",a[i]);
+        }
+            printf("\n");
+
+            return 0;
+}

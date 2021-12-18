@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main ()
+{
+        int long i,n,a[10],re;
+        printf("Enter the value of n \n");
+        scanf("%ld",&n);
+        for(i=0;i<10;i++)
+        {
+                a[i]=0;
+        }
+        while(n!=0)
+        {
+                re=n%10;
+                n=n/10;
+                a[re]++;
+        }
+        for(i=0;i<10;i++)
+        {
+                printf("Frequency of %ld is %ld \n",i,a[i]);
+        }
+          return 0;
+}
