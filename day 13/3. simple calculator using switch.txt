@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+int main ()
+{
+        int a,b;
+        char ch;
+        cout<<"Enter the two numbers: ";
+        cin>>a>>b;
+        cout<<"Enter the operation + - * % / : ";
+        cin>>ch;
+        switch(ch)
+        {
+                case '+':
+                        cout<<a<<"+"<<b<<"="<<a+b;
+                        break;
+                case '-' :
+                        cout<<a<<"-"<<b<<"="<<a-b;
+                        break;
+                case '*' :
+                         cout<<a<<"*"<<b<<"="<<a*b;
+                         break;
+                case '%':
+                         cout<<a<<"%"<<b<<"="<<a%b;
+                         break;
+                case '/' :
+                         if(b==0)
+                         {
+                                 cout<<"\n denominator is 0";
+                                 cout<<"\n division not possile";
+                                 break;
+                         }
+                         if(b!=0)
+                         {
+                                 cout<<a<<"/"<<b<<"="<<a/b<<endl;
+                                 break;
+                         }
+                default:
+                         cout<<"\nWronge input\n";
+         }
+        cout<<endl;
+        return 0;
+}

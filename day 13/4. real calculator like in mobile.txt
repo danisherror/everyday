@@ -1,0 +1,68 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+        float a,b,res=0;
+        char ch1;
+        while(1)
+        {
+        cout<<"Do you want to use previous result y/n : "<<endl;
+        cin>>ch1;
+        if(ch1=='y')
+        {
+
+        a=res;
+        cout<<"Enter the number y: ";
+        cin>>b;
+        }
+        else
+        {
+
+                cout<<"Enter the value x "<<endl;
+                cin>>a;
+                cout<<" Enter the value of y "<<endl;
+                cin>>b;
+        }
+
+         char ch;
+
+         cout<<"Enter the operation to perform + - * % / :\n";
+         cout<<"ENter 0 for exit\n";
+         cin>>ch;
+	 switch(ch)
+         {
+                 case '+':
+                        res=a+b;
+                         cout<<a<<"+"<<b<<"="<<res<<endl;
+                         a=0;
+                           break;
+                case '-':
+                           res=a-b;
+                            cout<<a<<"-"<<b<<"="<<res<<endl;
+                            break;
+                case '*':
+                            res=a*b;
+                             cout<<a<<"*"<<b<<"="<<res<<endl;
+                             break;
+                case '%' :
+                             res=(int) a% (int) b;
+                            cout<<a<<"%"<<b<<"="<<res<<endl;
+                            break;
+                case '/' :
+                            res=a/b;
+                            if(b==0)
+                            {
+                                    cout<<"Denominator is 0"<<endl;
+                                    cout<<"division not posible"<<endl;
+                            }
+                            if(b!=0)
+                            {
+                                    cout<<a<<"/"<<b<<"="<<res<<endl;
+                            }
+                            break;
+                case '0' :  exit (0) ;
+
+         }
+	  }
+         cout<<endl;
+}

@@ -1,0 +1,63 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+        int a1,b,no,i,cou,num;
+        int temp;
+        cout<<"ENter the two numbers: ";
+        cin>>a1>>b;
+
+        if(a1>b)
+        {
+                temp=a1;
+                a1=b;
+                b=temp;
+        }
+
+        for(i=a1;i<=b;i++)
+        {     no=i;
+                num=0;
+                if(i>10 && i<99)
+                {
+
+                for(; no!=0;no/= 10)
+                { cou=no%10;
+                        num=num+ pow(cou,2);
+                }
+
+                if(num==i)
+                {
+
+                        cout<<i<<" ";
+                }
+                }
+		if(i>100 && i<999)
+                {
+                  for(; no!=0;no/= 10)
+                  { 
+			cou=no%10;
+                      num=num+ pow(cou,3);
+                  }
+                  if(num==i)
+                  {
+                  cout<<i<<" ";
+                  }
+                }
+                if(i>1000 && i<9999)
+                      {
+                        for(; no!=0;no/= 10)
+                        {
+                           cou=no%10;
+                       num=num+ pow(cou,4);
+                        }
+                 if(num==i)
+              {
+                      cout<<i<<" ";
+               }	
+        }
+        }
+        cout<<endl;
+
+        return 0;
+}

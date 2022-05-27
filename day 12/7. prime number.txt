@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+        int n,i,low=0;
+        bool isprime= true;
+        cout<<"Enter the number : ";
+        cin>> n;
+        while(low<n)
+        {
+                isprime=true;
+        if(low==1 || low==0)
+        {
+                isprime=false;
+        }
+        else
+        {
+                for(i=2;i<low/2;i++)
+                {
+                        if(low%i==0)
+                        {
+                                isprime = false;
+                                break;
+                        }
+                }
+        }
+                if(isprime)
+                {
+                        cout<< low<<" ";
+                }
+        ++low;
+        }
+cout<<endl;
+        return 0;
+}

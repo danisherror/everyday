@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int main ()
+{
+        int i,n,fact=1;
+        cout<<"Enter the number: ";
+        cin>>n;
+        if(n==0||n==1)
+        {
+                cout<<"\n Fact is 1\n";
+        }
+        if(n<0)
+        {
+                cout<<"\nfactorial not possible\n";
+        }
+if(n>2)
+        {
+                for(i=2;i<=n;i++)
+                {
+                        fact= fact*i;
+                }
+                cout<<"\nFactorial of "<<n<<" is "<<fact<<endl;
+        }
+        return 0;
+}

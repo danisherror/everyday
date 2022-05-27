@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+void prime(int a,int b)
+{
+        int i,j;
+        if(a>b)
+        {
+                int temp;
+                temp=a;
+                a=b;
+                b=temp;
+        }
+        for(i=a;i<=b;i++)
+        {
+                if(i==0|| i==1)
+                {
+                        continue;
+                }
+                bool flag=1;
+                for(j=2;j<=i/2;j++)
+                {
+                        if(i%j==0)
+                        {
+                                flag=0;
+                                break;
+                        }
+                }
+                if(flag==1)
+                {
+                        cout<<i<<" ,";
+                }
+        }
+        cout<<"\n";
+}
+int main()
+{
+        int x,y;
+        cout<<"ENter the two numbers: ";
+        cin>>x>>y;
+        prime(x,y);
+        return 0;
+}
